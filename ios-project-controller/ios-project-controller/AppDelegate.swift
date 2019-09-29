@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  ios-project-ui
+//  ios-project-controller
 //
-//  Created by 李喜明 on 2019/9/25.
+//  Created by 李喜明 on 2019/9/29.
 //  Copyright © 2019 李喜明. All rights reserved.
 //
 
@@ -16,36 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //window?.rootViewController = UINavigationController(rootViewController: ViewController())
-        let weixin = WeiXinViewController()
-        //weixin.tabBarItem.image = UIImage(named: "vdvdv")?.withRenderingMode(.alwaysOriginal)
-        //weixin.tabBarItem.selectedImage = UIImage(named: "4")?.withRenderingMode(.alwaysOriginal)
-        weixin.tabBarItem.title = "微信"
-        weixin.tabBarItem.badgeValue = "10"
-        weixin.tabBarItem.badgeColor = UIColor.red
-        let weixinNavi = UINavigationController(rootViewController: weixin)
-        let constract = ConstactViewController()
-        //constract.tabBarItem.image = UIImage(named: "dvdfvdv")?.withRenderingMode(.alwaysOriginal)
-        //constract.tabBarItem.selectedImage = UIImage(named: "3")?.withRenderingMode(.alwaysOriginal)
-        constract.tabBarItem.title = "联系人"
-        constract.title = "联系人"
-        let constractNai = UINavigationController(rootViewController: constract)
-        
-        let found = FoundViewController()
-        //found.tabBarItem.image = UIImage(named: "vdfvdfv")?.withRenderingMode(.alwaysOriginal)
-        //found.tabBarItem.selectedImage = UIImage(named: "xzxxx")?.withRenderingMode(.alwaysOriginal)
-        found.tabBarItem.title = "发现"
-        
-        let me = MeViewController()
-        //me.tabBarItem.image = UIImage(named: "")?.withRenderingMode(.alwaysOriginal)
-        //me.tabBarItem.selectedImage = UIImage(named: "qq")?.withRenderingMode(.alwaysOriginal)
-        me.tabBarItem.title = "我"
-        
-        let bar = UITabBarController() //导航栏控制器
-        bar.tabBar.tintColor = UIColor.init(red: 9/255.0, green: 187/255.0, blue: 7/255.0, alpha: 1)
-        bar.viewControllers = [weixinNavi, constractNai, found, me]//添加子导航栏条目
-        bar.selectedIndex = 0//设置开始显示条目
-        window?.rootViewController = bar//加载导航栏控制器
         return true
     }
 
@@ -70,5 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+
+
 }
 
